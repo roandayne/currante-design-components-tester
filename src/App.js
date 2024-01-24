@@ -1,24 +1,35 @@
 import logo from './logo.svg';
 import './App.css';
+import TeaserPage from './containers/TeaserPage/TeaserPage';
+import React, { useState, useEffect } from 'react';
+import WebFont from 'webfontloader'
 
 function App() {
+  const [headerFont, setHeaderFont] = useState('');
+  const [nonHeaderFont, setNonHeaderFont] = useState('');
+
+  useEffect(() => {
+    console.log([headerFont.replace(/\s+/g, '+'), nonHeaderFont.replace(/\s+/g, '+')])
+    WebFont.load({
+      google: {
+        // families: [headerFont.replace(/\s+/g, '+'), nonHeaderFont.replace(/\s+/g, '+')],
+        families: [headerFont.replace(/\s+/g, '+'), nonHeaderFont.replace(/\s+/g, '+')],
+      },
+    });
+  }, [headerFont, nonHeaderFont]);
+
+  const handleHeaderFontChange = (value) => {
+    setHeaderFont(value)
+  }
+
+  const handleNonHeaderFontChange = (value) => {
+    setNonHeaderFont(value)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <TeaserPage headerFont={headerFont} nonHeaderFont={nonHeaderFont} handleHeaderFontChange={handleHeaderFontChange}  handleNonHeaderFontChange={handleNonHeaderFontChange} />
+    </>
   );
 }
 
