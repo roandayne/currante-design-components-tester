@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import TeaserPage from './containers/TeaserPage/TeaserPage';
 import React, { useState, useEffect } from 'react';
