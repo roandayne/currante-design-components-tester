@@ -79,7 +79,7 @@ function TeaserPage({headerFont, nonHeaderFont, handleHeaderFontChange, handleNo
 
       <NavBar showEditor={handleShowEditor} isEditorShown={isEditorShown} primary={primary} /> 
 
-      <Box padding="40px 0">
+      <Box padding="40px 0 0 0">
         <Welcome accent={accent} headerFont={headerFont} nonHeaderFont={nonHeaderFont} />
         <Newsletter accent={accent} lighterBg={lighterBg} headerFont={headerFont} nonHeaderFont={nonHeaderFont} />
         <Reasons darkerBg={darkerBg} headerFont={headerFont} nonHeaderFont={nonHeaderFont} />
