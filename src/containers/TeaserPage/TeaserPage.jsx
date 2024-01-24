@@ -84,7 +84,7 @@ function TeaserPage({headerFont, nonHeaderFont, handleHeaderFontChange, handleNo
         <Newsletter accent={accent} lighterBg={lighterBg} headerFont={headerFont} nonHeaderFont={nonHeaderFont} />
         <Reasons darkerBg={darkerBg} headerFont={headerFont} nonHeaderFont={nonHeaderFont} />
         <Intro headerFont={headerFont} nonHeaderFont={nonHeaderFont} />
-        <Newsletter headerFont={headerFont} nonHeaderFont={nonHeaderFont} />
+        <Newsletter accent={accent} lighterBg={lighterBg} headerFont={headerFont} nonHeaderFont={nonHeaderFont} />
       </Box>
       
       <Footer primary={primary} />
